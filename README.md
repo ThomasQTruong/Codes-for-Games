@@ -8,6 +8,7 @@
       - Just a template for every program.
       - Includes functions that makes creating each program easier.
         - goTo() - makes the robot go to a specific co-ordinate.
+        - changeDirection() - makes the robot face a specific direction as efficiently as possible.
         - goForward() - ensures that the robot moves forward.
         - goBackward() - ensures that the robot moves backward.
         - goUp() - ensures that the robot moves upward.
