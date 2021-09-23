@@ -64,7 +64,7 @@ end
 -- @param amount : integer, the amount of items to suck.
 function suckItem(amount)
   for i = 1, amount, 1 do
-    while not robot.suck() do
+    while not robot.suck(1) do
     end
   end
 end
