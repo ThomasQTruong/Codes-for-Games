@@ -33,16 +33,16 @@ function thomaslib.goTo(coord)
   local distanceZ = coord[3] - pos[3]
 
   -- Face East.
-  changeDirection(5)
+  thomaslib.changeDirection(5)
 
   -- x coordinate
   while distanceX ~= 0 do
     -- Decides whether to go backwards or forwards.
     if distanceX < 0 then
-      goBackward()
+      thomaslib.goBackward()
       distanceX = distanceX + 1
     else
-      goForward()
+      thomaslib.goForward()
       distanceX = distanceX - 1
     end
   end
@@ -50,24 +50,24 @@ function thomaslib.goTo(coord)
   -- y coordinate
   while distanceY ~= 0 do
     if distanceY < 0 then
-      goDown()
+      thomaslib.goDown()
       distanceY = distanceY + 1
     else
-      goUp()
+      thomaslib.goUp()
       distanceY = distanceY - 1
     end
   end
 
   -- Face North
-  changeDirection(2)
+  thomaslib.changeDirection(2)
 
   -- z coordinate
   while distanceZ ~= 0 do
     if distanceZ < 0 then
-      goForward()
+      thomaslib.goForward()
       distanceZ = distanceZ + 1
     else
-      goBackward()
+      thomaslib.goBackward()
       distanceZ = distanceZ - 1
     end
   end
@@ -174,21 +174,21 @@ end
 --]]
 function thomaslib.buildRight()
   robot.turnRight()
-  goForward()
+  thomaslib.goForward()
   robot.turnLeft()
-  placeBlock()
+  thomaslib.placeBlock()
 end
 
 function thomaslib.buildLeft()
   robot.turnLeft()
-  goForward()
+  thomaslib.goForward()
   robot.turnRight()
-  placeBlock()
+  thomaslib.placeBlock()
 end
 
 function thomaslib.buildUp()
-  goUp()
-  placeBlock()
+  thomaslib.goUp()
+  thomaslib.placeBlock()
 end
 
 
