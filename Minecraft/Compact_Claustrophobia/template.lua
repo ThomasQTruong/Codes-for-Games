@@ -96,7 +96,7 @@ end
   Makes the robot go to a location.
   Does not have pathmaking, nothing should obstruct it.
   
-  @param coord the coordinate to go to; table value.
+  @param coord : table, the coordinate to go to.
 --]]
 function goTo(coord)
   local pos = {nav.getPosition()}
@@ -151,7 +151,16 @@ function goTo(coord)
   end
 end
 
--- Change direction.
+--[[
+  Changes the direction of the robot.
+  Figures out the quickest turns.
+
+  @param dir : int, the direction to turn to.
+    2 = north
+    5 = east
+    3 = south
+    4 = west
+--]]
 function changeDirection(dir)
   -- Valid dir?
   if dir < 2 or dir > 5 then
