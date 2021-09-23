@@ -179,34 +179,34 @@ function changeDirection(dir)
   if currentDir == 3 or currentDir == 4 then
     -- dir is even.
     if dir % 2 == 0 then
-      turnRight()
+      robot.turnRight()
       -- Need a second turn?
       if nav.getFacing() ~= dir then
-        turnRight()
+        robot.turnRight()
       end
     -- dir is odd.
     else
-      turnLeft()
+      robot.turnLeft()
       -- Need a second turn?
       if nav.getFacing() ~= dir then
-        turnLeft()
+        robot.turnLeft()
       end
     end
   -- currentDir is 2 or 5.
   else
     -- dir is even.
     if dir % 2 == 0 then
-      turnLeft()
+      robot.turnLeft()
       -- Need a second turn?
       if nav.getFacing() ~= dir then
-        turnLeft()
+        robot.turnLeft()
       end
     -- dir is odd.
     else
-      turnRight()
+      robot.turnRight()
       -- Need a second turn?
       if nav.getFacing() ~= dir then
-        turnRight()
+        robot.turnRight()
       end
     end
   end
