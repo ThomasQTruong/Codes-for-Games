@@ -35,6 +35,8 @@ function main()
   -- Grab 1 redstone block.
   goTo(items[3])
   suckItem(1)
+  -- Go to start point.
+  goTo({6, 41, 6})
 end
 
 
