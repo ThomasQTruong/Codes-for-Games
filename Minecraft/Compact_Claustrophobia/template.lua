@@ -110,10 +110,8 @@ function goTo(coord)
   local distanceY = coord[2] - pos[2]
   local distanceZ = coord[3] - pos[3]
 
-  -- Face the correct way.
-  while nav.getFacing() ~= 5 do
-    robot.turnLeft()
-  end
+  -- Face East.
+  changeDirection(5)
 
   -- x coordinate
   while distanceX ~= 0 do
@@ -138,10 +136,8 @@ function goTo(coord)
     end
   end
 
-  -- Face the correct way.
-  while nav.getFacing() ~= 2 do
-    robot.turnLeft()
-  end
+  -- Face North
+  changeDirection(2)
 
   -- z coordinate
   while distanceZ ~= 0 do
@@ -151,6 +147,52 @@ function goTo(coord)
     else
       goBackward()
       distanceZ = distanceZ - 1
+    end
+  end
+end
+
+-- Change direction.
+function changeDirection(dir)
+  -- Valid dir?
+  if dir < 2 or dir > 5 then
+    os.exit(1)
+  end
+
+  local currentDir = nav.getFacing()
+
+  -- currentDir is 3 or 4.
+  if currentDir == 3 or currentDir == 4 then
+    -- dir is even.
+    if dir % 2 == 0 then
+      turnRight()
+      -- Need a second turn?
+      if nav.getFacing() ~= dir then
+        turnRight()
+      end
+    -- dir is odd.
+    else
+      turnLeft()
+      -- Need a second turn?
+      if nav.getFacing() ~= dir then
+        turnLeft()
+      end
+    end
+  -- currentDir is 2 or 5.
+  else
+    -- dir is even.
+    if dir % 2 == 0 then
+      turnLeft()
+      -- Need a second turn?
+      if nav.getFacing() ~= dir then
+        turnLeft()
+      end
+    -- dir is odd.
+    else
+      turnRight()
+      -- Need a second turn?
+      if nav.getFacing() ~= dir then
+        turnRight()
+      end
     end
   end
 end
