@@ -1,3 +1,12 @@
+--[[
+ - thomaslib.lua
+ - 
+ - A library that provides many useful functions which help
+ - create opencomputer programs much easier.
+ -
+ - Copyright (c) 2021, Thomas Truong.
+--]]
+
 local thomaslib = {}
 
 local robot = require("robot")
