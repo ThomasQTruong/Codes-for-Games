@@ -23,6 +23,7 @@ if args[1] == nil then
   os.exit()
 end
 
+
 -- The main function; everything happens here!
 function main()
 end
