@@ -72,6 +72,7 @@ function goTo(coord)
     end
   end
 end
+thomaslib.goTo = goTo
 
 --[[
   Changes the direction of the robot.
@@ -127,6 +128,7 @@ function changeDirection(dir)
     end
   end
 end
+thomaslib.changeDirection = changeDirection
 
 
 --[[
@@ -138,26 +140,31 @@ function goForward()
   while not robot.forward() do
   end
 end
+thomaslib.goForward = goForward
 
 function goBackward()
   while not robot.back() do
   end
 end
+thomaslib.goBackward = goBackward
 
 function goUp()
   while not robot.up() do
   end
 end
+thomaslib.goUp = goUp
 
 function goDown()
   while not robot.down() do
   end
 end
+thomaslib.goDown = goDown
 
 function placeBlock()
   while not robot.place() do
   end
 end
+thomaslib.placeBlock = placeBlock
 
 -- @param amount : integer, the amount of items to suck.
 function suckItem(amount)
@@ -166,6 +173,7 @@ function suckItem(amount)
     end
   end
 end
+thomaslib.suckItem = suckItem
 
 
 --[[
@@ -178,6 +186,7 @@ function buildRight()
   robot.turnLeft()
   placeBlock()
 end
+thomaslib.buildRight = buildRight
 
 function buildLeft()
   robot.turnLeft()
@@ -185,11 +194,13 @@ function buildLeft()
   robot.turnRight()
   placeBlock()
 end
+thomaslib.buildLeft = buildLeft
 
 function buildUp()
   goUp()
   placeBlock()
 end
+thomaslib.buildUp = buildUp
 
 
 return thomaslib
