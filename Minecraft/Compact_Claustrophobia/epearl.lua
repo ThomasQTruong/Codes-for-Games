@@ -11,8 +11,8 @@ local nav = component.navigation
 
 local origin = {2, 41, 2}   -- [0] = x, [1] = y, [2] = z
 local items = {{5, 41, 2},  -- [0][i] = redstone dust, xyz.
-               {6, 41, 8},  -- [1][i] = item2, xyz.
-               {7, 41, 8}}  -- [2][i] = item3, xyz.
+               {6, 41, 2},  -- [1][i] = item2, xyz.
+               {7, 41, 2}}  -- [2][i] = item3, xyz.
 
 -- args[1] = the amount of item(s) to create.
 args = {...}
@@ -26,8 +26,15 @@ end
 
 -- The main function; everything happens here!
 function main()
+  -- Grab 1 redstone dust.
   goTo(items[1])
-  suckItem(2)
+  suckItem(1)
+  -- Grab 26 obsidian blocks.
+  goTo(items[2])
+  suckItem(26)
+  -- Grab 1 redstone block.
+  goTo(items[3])
+  suckItem(1)
 end
 
 
