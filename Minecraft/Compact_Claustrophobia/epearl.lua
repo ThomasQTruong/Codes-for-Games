@@ -35,8 +35,12 @@ function main()
   -- Grab 1 redstone block.
   goTo(items[3])
   suckItem(1)
-  -- Go to start point.
-  goTo({6, 41, 6})
+  --[[
+  -- Go to build start point.
+  goTo({6, 41, 5})
+  robot.select(2)  -- Switch to obsidian block.
+  placeBlock()
+  --]]
 end
 
 
@@ -44,7 +48,7 @@ end
   Force actions.
   Makes the robot keep attempting to do the same action
     until it succeeds.
-]]
+--]]
 function goForward()
   while not robot.forward() do
   end
@@ -82,7 +86,7 @@ end
 --[[
   Build shortcuts.
   Easily make the robot build next to it.
-]]
+--]]
 function buildRight()
   robot.turnRight()
   goForward()
@@ -108,7 +112,7 @@ end
   Does not have pathmaking, nothing should obstruct it.
   
   @param coord the coordinate to go to; table value.
-]]
+--]]
 function goTo(coord)
   local pos = {nav.getPosition()}
   -- Convert pos to whole numbers.
