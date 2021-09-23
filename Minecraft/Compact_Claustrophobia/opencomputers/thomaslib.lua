@@ -1,5 +1,5 @@
 --[[
- - thomaslib.lua
+ - lua
  - 
  - A library that provides many useful functions which help
  - create opencomputer programs much easier.
@@ -20,7 +20,7 @@ local nav = component.navigation
   
   @param coord : table, the coordinate to go to.
 --]]
-function thomaslib.goTo(coord)
+function goTo(coord)
   local pos = {nav.getPosition()}
   -- Convert pos to whole numbers.
   pos[1] = math.floor(pos[1])
@@ -33,16 +33,16 @@ function thomaslib.goTo(coord)
   local distanceZ = coord[3] - pos[3]
 
   -- Face East.
-  thomaslib.changeDirection(5)
+  changeDirection(5)
 
   -- x coordinate
   while distanceX ~= 0 do
     -- Decides whether to go backwards or forwards.
     if distanceX < 0 then
-      thomaslib.goBackward()
+      goBackward()
       distanceX = distanceX + 1
     else
-      thomaslib.goForward()
+      goForward()
       distanceX = distanceX - 1
     end
   end
@@ -50,24 +50,24 @@ function thomaslib.goTo(coord)
   -- y coordinate
   while distanceY ~= 0 do
     if distanceY < 0 then
-      thomaslib.goDown()
+      goDown()
       distanceY = distanceY + 1
     else
-      thomaslib.goUp()
+      goUp()
       distanceY = distanceY - 1
     end
   end
 
   -- Face North
-  thomaslib.changeDirection(2)
+  changeDirection(2)
 
   -- z coordinate
   while distanceZ ~= 0 do
     if distanceZ < 0 then
-      thomaslib.goForward()
+      goForward()
       distanceZ = distanceZ + 1
     else
-      thomaslib.goBackward()
+      goBackward()
       distanceZ = distanceZ - 1
     end
   end
@@ -83,7 +83,7 @@ end
     3 = south
     4 = west
 --]]
-function thomaslib.changeDirection(dir)
+function changeDirection(dir)
   -- Valid dir?
   if dir < 2 or dir > 5 then
     os.exit(1)
@@ -134,33 +134,33 @@ end
   Makes the robot keep attempting to do the same action
     until it succeeds.
 --]]
-function thomaslib.goForward()
+function goForward()
   while not robot.forward() do
   end
 end
 
-function thomaslib.goBackward()
+function goBackward()
   while not robot.back() do
   end
 end
 
-function thomaslib.goUp()
+function goUp()
   while not robot.up() do
   end
 end
 
-function thomaslib.goDown()
+function goDown()
   while not robot.down() do
   end
 end
 
-function thomaslib.placeBlock()
+function placeBlock()
   while not robot.place() do
   end
 end
 
 -- @param amount : integer, the amount of items to suck.
-function thomaslib.suckItem(amount)
+function suckItem(amount)
   for i = 1, amount, 1 do
     while not robot.suck(1) do
     end
@@ -172,23 +172,23 @@ end
   Build shortcuts.
   Easily make the robot build next to it.
 --]]
-function thomaslib.buildRight()
+function buildRight()
   robot.turnRight()
-  thomaslib.goForward()
+  goForward()
   robot.turnLeft()
-  thomaslib.placeBlock()
+  placeBlock()
 end
 
-function thomaslib.buildLeft()
+function buildLeft()
   robot.turnLeft()
-  thomaslib.goForward()
+  goForward()
   robot.turnRight()
-  thomaslib.placeBlock()
+  placeBlock()
 end
 
-function thomaslib.buildUp()
-  thomaslib.goUp()
-  thomaslib.placeBlock()
+function buildUp()
+  goUp()
+  placeBlock()
 end
 
 
