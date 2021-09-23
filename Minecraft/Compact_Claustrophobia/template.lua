@@ -10,7 +10,7 @@ local component = require("component")
 local nav = component.navigation
 
 local origin = {2, 41, 2}   -- [0] = x, [1] = y, [2] = z
-local items = {{5, 41, 3},  -- [0][i] = item1, xyz.
+local items = {{5, 41, 2},  -- [0][i] = item1, xyz.
                {6, 41, 8},  -- [1][i] = item2, xyz.
                {7, 41, 8}}  -- [2][i] = item3, xyz.
 
@@ -56,6 +56,14 @@ end
 
 function placeBlock()
   while not robot.place() do
+  end
+end
+
+-- @param amount : integer, the amount of items to suck.
+function suckItem(amount)
+  for i = 1, amount, 1 do
+    while not robot.suck() do
+    end
   end
 end
 
