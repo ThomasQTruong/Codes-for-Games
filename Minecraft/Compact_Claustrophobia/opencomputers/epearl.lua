@@ -1,6 +1,7 @@
 --[[
- - template.lua
- - desc.
+ - epearl.lua
+ - Uses a robot to autocraft n amount of enderpearl(s).
+ - The robot will craft using a miniaturizer.
  -
  - Copyright (c) 2021, Thomas Truong.
 --]]
@@ -36,7 +37,21 @@ function main()
   -- Go to build start point.
   goTo({6, 41, 5})
   robot.select(2)  -- Switch to obsidian block.
+  -- Build layer 1, row 1.
   placeBlock()
+  thomaslib.buildLeft()
+  thomaslib.buildLeft()
+  robot.back()
+  -- Build layer 1 row 2.
+  placeBlock()
+  thomaslib.buildRight()
+  thomaslib.buildRight()
+  robot.back()
+  -- Build layer 1 row 3.
+  placeBlock()
+  thomaslib.buildLeft()
+  thomaslib.buildLeft()
+  robot.back()
   thomaslib.goTo(origin)
 end
 
