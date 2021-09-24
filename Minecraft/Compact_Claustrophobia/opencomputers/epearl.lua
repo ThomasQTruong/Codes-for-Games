@@ -33,12 +33,10 @@ function main()
   -- Grab 1 redstone block.
   thomaslib.goTo(items[3])
   thomaslib.suckItem(1)
-  --[[
   -- Go to build start point.
   goTo({6, 41, 5})
   robot.select(2)  -- Switch to obsidian block.
   placeBlock()
-  --]]
   thomaslib.goTo(origin)
 end
 
