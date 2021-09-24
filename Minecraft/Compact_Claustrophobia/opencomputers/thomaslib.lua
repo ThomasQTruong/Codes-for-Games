@@ -76,6 +76,18 @@ local function thomaslib.buildUp()
   placeBlock()
 end
 
+local function thomaslib.buildRowRight()
+  placeBlock()
+  buildRight()
+  buildRight()
+end
+
+local function thomaslib.buildRowLeft()
+  placeBlock()
+  buildLeft()
+  buildLeft()
+end
+
 
 --[[
   Changes the direction of the robot.

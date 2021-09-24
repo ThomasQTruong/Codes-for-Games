@@ -18,6 +18,8 @@
           - buildRight() - Makes the robot place a block to the right of the block its facing.
           - buildLeft() - Makes the robot place a block to the left of the block its facing.
           - buildUp() - Makes the robot place a block above the block its facing.
+          - buildRowRight() - Makes the robot create a row to the right.
+          - buildRowLeft() - Makes the robot create a row to the left.
           - changeDirection() - makes the robot face a specific direction as efficiently as possible.
           - goTo() - makes the robot go to a specific co-ordinate.
       - epearl.lua
