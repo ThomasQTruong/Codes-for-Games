@@ -19,73 +19,37 @@ local nav = component.navigation
   Makes the robot keep attempting to do the same action
     until it succeeds.
 --]]
-local function thomaslib.goForward()
+function thomaslib.goForward()
   while not robot.forward() do
   end
 end
 
-local function thomaslib.goBackward()
+function thomaslib.goBackward()
   while not robot.back() do
   end
 end
 
-local function thomaslib.goUp()
+function thomaslib.goUp()
   while not robot.up() do
   end
 end
 
-local function thomaslib.goDown()
+function thomaslib.goDown()
   while not robot.down() do
   end
 end
 
-local function thomaslib.placeBlock()
+function thomaslib.placeBlock()
   while not robot.place() do
   end
 end
 
 -- @param amount : integer, the amount of items to suck.
-local function thomaslib.suckItem(amount)
+function thomaslib.suckItem(amount)
   for i = 1, amount, 1 do
     while not robot.suck(1) do
     end
   end
-end
-
-
---[[
-  Build shortcuts.
-  Easily make the robot build next to it.
---]]
-local function thomaslib.buildRight()
-  robot.turnRight()
-  goForward()
-  robot.turnLeft()
-  placeBlock()
-end
-
-local function thomaslib.buildLeft()
-  robot.turnLeft()
-  goForward()
-  robot.turnRight()
-  placeBlock()
-end
-
-local function thomaslib.buildUp()
-  goUp()
-  placeBlock()
-end
-
-local function thomaslib.buildRowRight()
-  placeBlock()
-  buildRight()
-  buildRight()
-end
-
-local function thomaslib.buildRowLeft()
-  placeBlock()
-  buildLeft()
-  buildLeft()
 end
 
 
@@ -98,7 +62,7 @@ end
     3 = south
     4 = west
 --]]
-local function thomaslib.changeDirection(dir)
+function thomaslib.changeDirection(dir)
   -- Valid dir?
   if dir < 2 or dir > 5 then
     os.exit(1)
@@ -149,7 +113,7 @@ end
   
   @param coord : table, the coordinate to go to.
 --]]
-local function thomaslib.goTo(coord)
+function thomaslib.goTo(coord)
   local pos = {nav.getPosition()}
   -- Convert pos to whole numbers.
   pos[1] = math.floor(pos[1])
@@ -200,6 +164,42 @@ local function thomaslib.goTo(coord)
       distanceZ = distanceZ - 1
     end
   end
+end
+
+
+--[[
+  Build shortcuts.
+  Easily make the robot build next to it.
+--]]
+function thomaslib.buildRight()
+  robot.turnRight()
+  goForward()
+  robot.turnLeft()
+  placeBlock()
+end
+
+function thomaslib.buildLeft()
+  robot.turnLeft()
+  goForward()
+  robot.turnRight()
+  placeBlock()
+end
+
+function thomaslib.buildUp()
+  goUp()
+  placeBlock()
+end
+
+function thomaslib.buildRowRight()
+  placeBlock()
+  buildRight()
+  buildRight()
+end
+
+function thomaslib.buildRowLeft()
+  placeBlock()
+  buildLeft()
+  buildLeft()
 end
 
 
