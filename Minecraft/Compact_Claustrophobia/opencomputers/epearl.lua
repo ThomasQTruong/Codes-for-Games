@@ -39,20 +39,47 @@ local function main()
   goTo({6, 41, 5})
   robot.select(2)  -- Switch to obsidian block.
   -- Build layer 1, row 1.
-  placeBlock()
-  thomaslib.buildLeft()
-  thomaslib.buildLeft()
+  thomaslib.buildRowLeft()
+  -- Build layer 1, row 2.
   robot.back()
-  -- Build layer 1 row 2.
-  placeBlock()
-  thomaslib.buildRight()
-  thomaslib.buildRight()
+  thomaslib.buildRowRight()
+  -- Build layer 1, row 3.
   robot.back()
-  -- Build layer 1 row 3.
-  placeBlock()
-  thomaslib.buildLeft()
-  thomaslib.buildLeft()
+  thomaslib.buildRowLeft()
+  -- Build layer 2, row 1.
   robot.back()
+  robot.up()
+  thomaslib.goForward()
+  thomaslib.goForward()
+  thomaslib.buildRowRight()
+  -- Build layer 2, row 2. 
+  robot.back()
+  thomaslib.placeBlock()
+  robot.select(3)  -- Switch to redstone block.
+  thomaslib.buildLeft()
+  robot.select(2)  -- Switch back to obsidian block.
+  thomaslib.buildLeft()
+  -- Build layer 2, row 3.
+  robot.back()
+  thomaslib.buildRowRight()
+  -- Build layer 3, row 1.
+  robot.back()
+  robot.up()
+  thomaslib.goForward()
+  thomaslib.goForward()
+  thomaslib.buildRowLeft()
+  -- Build layer 3, row 2.
+  robot.back()
+  thomaslib.buildRowRight()
+  -- Build layer3, row 3.
+  robot.back()
+  thomaslib.buildRowLeft()
+  -- Throw redstone dust.
+  robot.back()
+  robot.select(1)  -- Switch to redstone dust.
+  robot.drop(1)
+
+  -- Go back to origin.
   thomaslib.goTo(origin)
 end
 
