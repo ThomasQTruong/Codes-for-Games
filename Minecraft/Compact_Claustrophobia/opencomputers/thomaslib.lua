@@ -19,33 +19,33 @@ local nav = component.navigation
   Makes the robot keep attempting to do the same action
     until it succeeds.
 --]]
-function thomaslib.goForward()
+local function thomaslib.goForward()
   while not robot.forward() do
   end
 end
 
-function thomaslib.goBackward()
+local function thomaslib.goBackward()
   while not robot.back() do
   end
 end
 
-function thomaslib.goUp()
+local function thomaslib.goUp()
   while not robot.up() do
   end
 end
 
-function thomaslib.goDown()
+local function thomaslib.goDown()
   while not robot.down() do
   end
 end
 
-function thomaslib.placeBlock()
+local function thomaslib.placeBlock()
   while not robot.place() do
   end
 end
 
 -- @param amount : integer, the amount of items to suck.
-function thomaslib.suckItem(amount)
+local function thomaslib.suckItem(amount)
   for i = 1, amount, 1 do
     while not robot.suck(1) do
     end
@@ -57,21 +57,21 @@ end
   Build shortcuts.
   Easily make the robot build next to it.
 --]]
-function thomaslib.buildRight()
+local function thomaslib.buildRight()
   robot.turnRight()
   goForward()
   robot.turnLeft()
   placeBlock()
 end
 
-function thomaslib.buildLeft()
+local function thomaslib.buildLeft()
   robot.turnLeft()
   goForward()
   robot.turnRight()
   placeBlock()
 end
 
-function thomaslib.buildUp()
+local function thomaslib.buildUp()
   goUp()
   placeBlock()
 end
@@ -86,7 +86,7 @@ end
     3 = south
     4 = west
 --]]
-function thomaslib.changeDirection(dir)
+local function thomaslib.changeDirection(dir)
   -- Valid dir?
   if dir < 2 or dir > 5 then
     os.exit(1)
@@ -137,7 +137,7 @@ end
   
   @param coord : table, the coordinate to go to.
 --]]
-function thomaslib.goTo(coord)
+local function thomaslib.goTo(coord)
   local pos = {nav.getPosition()}
   -- Convert pos to whole numbers.
   pos[1] = math.floor(pos[1])

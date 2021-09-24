@@ -6,6 +6,7 @@
 --]]
 
 local thomaslib = require("thomaslib")
+local robot = require("robot")
 
 local origin = {2, 41, 2}   -- [0] = x, [1] = y, [2] = z
 local items = {{5, 41, 2},  -- [0][i] = item1, xyz.
@@ -23,7 +24,7 @@ end
 
 
 -- The main function; everything happens here!
-function main()
+local function main()
   -- Write code here.
 end
 
