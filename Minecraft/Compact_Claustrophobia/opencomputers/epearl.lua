@@ -24,28 +24,22 @@ end
 
 -- The main function; everything happens here!
 function main()
-   -- Grab 1 redstone dust.
-   thomaslib.goTo(items[1])
-   thomaslib.suckItem(1)
-   -- Grab 26 obsidian blocks.
-   thomaslib.goTo(items[2])
-   thomaslib.suckItem(26)
-   -- Grab 1 redstone block.
-   thomaslib.goTo(items[3])
-   thomaslib.suckItem(1)
-   --[[
-   -- Go to build start point.
-   goTo({6, 41, 5})
-   robot.select(2)  -- Switch to obsidian block.
-   placeBlock()
-   --]]
-   thomaslib.goTo(origin)
-end
-
-
--- Repeat main args[1] times.
-for i = 1, args[1], 1 do
-  main()
+  -- Grab 1 redstone dust.
+  thomaslib.goTo(items[1])
+  thomaslib.suckItem(1)
+  -- Grab 26 obsidian blocks.
+  thomaslib.goTo(items[2])
+  thomaslib.suckItem(26)
+  -- Grab 1 redstone block.
+  thomaslib.goTo(items[3])
+  thomaslib.suckItem(1)
+  --[[
+  -- Go to build start point.
+  goTo({6, 41, 5})
+  robot.select(2)  -- Switch to obsidian block.
+  placeBlock()
+  --]]
+  thomaslib.goTo(origin)
 end
 
 
