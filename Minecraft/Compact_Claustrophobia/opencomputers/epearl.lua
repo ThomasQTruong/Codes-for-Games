@@ -36,7 +36,7 @@ local function main()
   thomaslib.goTo(items[3])
   thomaslib.suckItem(1)
   -- Go to build start point.
-  goTo({6, 41, 5})
+  thomaslib.goTo({6, 41, 5})
   robot.select(2)  -- Switch to obsidian block.
   -- Build layer 1, row 1.
   thomaslib.buildRowLeft()
