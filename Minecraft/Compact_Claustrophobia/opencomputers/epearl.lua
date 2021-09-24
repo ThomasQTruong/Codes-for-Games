@@ -20,7 +20,7 @@ args = {...}
 -- Amount was not inputted, end.
 if args[1] == nil then
   print("Usage: ./file [amount]")
-  os.exit(1)
+  os.exit()
 end
 
 
