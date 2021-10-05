@@ -15,13 +15,13 @@
           - goDown() - ensures that the robot moves downward.
           - placeBlock() - ensures that the robot places a block.
           - suckItem(amount) - ensures that the robot sucks an amount of items.
+          - changeDirection() - makes the robot face a specific direction as efficiently as possible.
+          - goTo() - makes the robot go to a specific co-ordinate.
           - buildRight() - Makes the robot place a block to the right of the block its facing.
           - buildLeft() - Makes the robot place a block to the left of the block its facing.
           - buildUp() - Makes the robot place a block above the block its facing.
           - buildRowRight() - Makes the robot create a row to the right.
           - buildRowLeft() - Makes the robot create a row to the left.
-          - changeDirection() - makes the robot face a specific direction as efficiently as possible.
-          - goTo() - makes the robot go to a specific co-ordinate.
       - epearl.lua
         - Uses an in-game robot to create n amounts of enderpearls.
         - Usage: ./epearl \[n\]

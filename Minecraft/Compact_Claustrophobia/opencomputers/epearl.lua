@@ -6,6 +6,7 @@
  - Copyright (c) 2021, Thomas Truong.
 --]]
 
+
 local thomaslib = require("thomaslib")
 local robot = require("robot")
 
@@ -15,7 +16,7 @@ local items = {{5, 41, 2},  -- [0][i] = item1, xyz.
                {7, 41, 2}}  -- [2][i] = item3, xyz.
 
 -- args[1] = the amount of item(s) to create.
-args = {...}
+local args = {...}
 
 -- Amount was not inputted, end.
 if args[1] == nil then
@@ -47,7 +48,6 @@ local function main()
   robot.back()
   thomaslib.buildRowLeft()
   -- Build layer 2, row 1.
-  robot.back()
   robot.up()
   thomaslib.goForward()
   thomaslib.goForward()
@@ -63,7 +63,6 @@ local function main()
   robot.back()
   thomaslib.buildRowRight()
   -- Build layer 3, row 1.
-  robot.back()
   robot.up()
   thomaslib.goForward()
   thomaslib.goForward()

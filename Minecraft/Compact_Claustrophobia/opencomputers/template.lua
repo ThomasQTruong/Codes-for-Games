@@ -14,7 +14,7 @@ local items = {{5, 41, 2},  -- [0][i] = item1, xyz.
                {7, 41, 2}}  -- [2][i] = item3, xyz.
 
 -- args[1] = the amount of item(s) to create.
-args = {...}
+local args = {...}
 
 -- Amount was not inputted, end.
 if args[1] == nil then
