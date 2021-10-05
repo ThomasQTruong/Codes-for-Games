@@ -25,7 +25,13 @@ end
 
 -- The main function; everything happens here!
 local function main()
+  -- Make sure it is selecting first slot.
+  robot.select(1)
+
   -- Write code here.
+
+  -- Go back to origin.
+  thomaslib.goTo(origin)
 end
 
 
