@@ -23,6 +23,14 @@
           - buildRowRight() - Makes the robot create a row to the right.
           - buildRowLeft() - Makes the robot create a row to the left.
       - epearl.lua
-        - Uses an in-game robot to create n amounts of enderpearls.
+        - Uses an in-game robot to create n amounts of enderpearl(s).
         - Usage: ./epearl \[n\]
           - n = the amount of enderpearls to create.
+      - machine_normal.lua
+        - Uses an in-game robot to create n amounts of normal compact machine(s).
+        - Usage: ./machine_normal \[n\]
+          - n = the amount of normal compact machines to create.
+      - machine_wall.lua
+        - Uses an in-game robot to create n amounts of compact machine wall(s).
+        - Usage: ./machine_wall \[n\]
+          - n = the amount of compact machine wall(s) to create.
