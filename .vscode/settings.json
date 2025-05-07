@@ -1,5 +1,9 @@
 {
+  "Lua.workspace.library": [
+    "./cc-stubs"
+  ],
   "Lua.diagnostics.globals": [
-    "changeDirection"
+    "changeDirection",
+    "fs", "shell", "http", "term", "peripheral", "textutils"
   ]
 }
