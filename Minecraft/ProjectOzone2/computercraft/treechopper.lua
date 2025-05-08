@@ -6,12 +6,25 @@
 --]]
 
 while true do
-  while turtle.detect() do
+  --- Wood is infront of turtle (start harvesting).
+  local _, data = turtle.inspect()
+  if data.name == "minecraft:log" then
+    --- Mine stump.
     turtle.dig()
-    turtle.up()
-  end
-
-  while not turtle.detect() and not turtle.detectDown() do
-    turtle.down()
+    --- Move where the stump was.
+    turtle.forward()
+    --- Dig up until no more wood.
+    while data.name == "minecraft:log" do
+      _, data = turtle.inspect()
+      turtle.digUp()
+      turtle.up()
+    end
+    --- Move down after mining all the wood.
+    while not turtle.detectDown() do
+      turtle.down()
+    end
+    --- Move back to origin.
+    turtle.back()
+    --- Replant sapling.
   end
 end
