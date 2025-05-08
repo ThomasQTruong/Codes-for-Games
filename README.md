@@ -37,23 +37,24 @@
     - computercraft
       - wget.lua
         - The wget unix command (used to download other scripts).
-        - Put into `/bin/` directory.
         - Relies on startup.lua OR current working directory.
         - Usage: `wget <url> \[output]`
           - url = link to the file to download (i.e. raw GitHub file).
           - output = name of the output file (can leave blank to parse URL for name).
         - Creation:
           - Different methods:
-            1. Manually Write
+            1. Read and use **StartingOut.md** (easiest).
+            2. Manually Write
                 - Create file with `edit /bin/wget`.
                 - Copy code from wget.lua into wget.
-            2. PasteBin
+            3. PasteBin
                 - Upload to [PasteBin](https://pastebin.com/).
                 - Use command in-game on computer to download: `pastebin get <url> <filename>`.
                   - url = pastebin link.
                   - filename = name of the output file.
       - startup.lua
         - Runs when the computer starts up.
+        - If needed: change `/disk/wget` to the directory you keep your wget file in.
         - Creation:
           - Use `edit /startup` to create a file in the home directory.
             - Copy code from startup.lua into startup.

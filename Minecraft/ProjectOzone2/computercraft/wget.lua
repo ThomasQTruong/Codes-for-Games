@@ -1,7 +1,6 @@
 --[[
  - wget.lua
  - The wget unix command.
- - Put into bin directory.
  - Relies on startup.lua OR current working directory.
  -
  - Copyright (c) 2025, Thomas Truong.

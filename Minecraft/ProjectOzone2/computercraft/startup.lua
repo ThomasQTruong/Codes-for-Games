@@ -5,4 +5,4 @@
  - Copyright (c) 2025, Thomas Truong.
 --]]
 
-shell.setAlias("wget", "/bin/wget")
+shell.setAlias("wget", "/disk/wget")
