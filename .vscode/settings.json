@@ -1,9 +1,9 @@
 {
+  "Lua.runtime.version": "LuaJIT",
   "Lua.workspace.library": [
     "./cc-stubs"
   ],
   "Lua.diagnostics.globals": [
-    "changeDirection",
-    "fs", "shell", "http", "term", "peripheral", "textutils"
+    "changeDirection"
   ]
 }

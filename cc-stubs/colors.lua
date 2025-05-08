@@ -1,3 +1,7 @@
+---@class colors
+colors = {}
+
+
 colors.white = 1
 colors.orange = 2
 colors.magenta = 4
@@ -16,21 +20,19 @@ colors.red = 16384
 colors.black = 32768
 
 --- Combines a one or more colors (or sets of colors) into a larger set.
-function colors.combine(color1)
-    color1 = 1
-    return 1
+---@return number value
+function colors.combine(color1, color2, ...)
+  return 0
 end
 
 --- Removes one or more colors (or sets of colors) from an initial set.
-function colors.subtract(color1,color2)
-    color1 = 1
-    color2 = 1   
-    return 1
+---@return number value
+function colors.subtract(colors, color1, color2, ...)
+  return 0
 end
 
----Tests whether color is contained within colors.
+--- Tests whether color is contained within colors.
+---@return boolean contained
 function colors.test(colors, color)
-    colors = 1
-    color = 1
-    return 1
+  return true
 end

@@ -1,29 +1,35 @@
----@classdef HTTPHandle @extends FileHandle
-local handle = {}
-function handle.getResponseCode()
-    return 1
+---@class http
+http = {}
+
+
+--- Sends a HTTP request to a website, asynchronously.
+---@param url string
+---@param postData string|nil @optional
+---@param headers table|nil @optional
+function http.request(url, postData, headers)
 end
 
----Sends a HTTP request to a website, asynchronously.
--- @param url @class string
--- @param postData @optional @class string
-function http.request(url,postData)
-    
+--- Sends a HTTP GET request to a website, synchronously.
+---@param url string
+---@param headers table|nil @optional
+---@return table handle
+function http.get(url, headers)
+  return {}
 end
 
----Sends a HTTP GET request to a website, synchronously.
--- @param url @class string
--- @return @class HTTPHandle
-function http.get(url)
-    
+--- Sends a HTTP POST request to a website, synchronously.
+---@param url string
+---@param postData string
+---@param headers table|nil @optional
+---@return table handle
+function http.post(url, postData, headers)
+  return {}
 end
 
----Sends a HTTP request to a website, asynchronously.
--- @param url @class string
--- @param postData @optional @class string
--- @return @class HTTPHandle
-function http.post(url,postData)
-    
+--- Checks if a URL is valid and is included in the HTTP whitelist.
+---@param url string
+---@return boolean success
+---@return string|nil errorMessage
+function http.checkURL(url)
+  return true
 end
-
-

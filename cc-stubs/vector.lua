@@ -1,50 +1,75 @@
----@classdef vector
-local vectorClass = {}
+---@class vector
+vector = {}
+local vectorA = {}
 
- ---Creates a vector.
---@param x @class number
---@param y @class number
---@param z @class number
---@return @class vector
+
+--- Creates a vector.
+---@param x number
+---@param y number
+---@param z number
+---@return vector vector
 function vector.new(x, y, z)
-end 
- ---Adds vectorB to vectorA and returns the resulting vector. Can also be used by writing vectorA + vectorB.
---@param vectorB @class vector 
---@return @class number
-function vectorClass:add(vectorB)
-end 
- ---Subtracts vectorB from vectorA and returns the resulting vector. Can also be used by writing vectorA - vectorB.
---@param vectorB @class vector 
---@return @class number
-function vectorClass:sub(vectorB)
-end 
- ---Scalar multiplies vectorA with n and returns the resulting vector. Can also be used by writing vectorA * n.
---@return @class number
-function vectorClass:mul(n)
-end 
- ---Returns the dot product of vectorA and vectorB.
---@param vectorB @class vector 
---@return @class number
-function vectorClass:dot(vectorB)
-end 
- ---Returns the vector which resulted in the cross product of vectorA and vectorB.
---@param vectorB @class vector 
---@return @class number
-function vectorClass:cross(vectorB)
-end 
- ---Returns the vector's length.
---@return @class number
-function vectorClass:length()
-end 
- ---Normalizes the vector and returns the result as a new vector.
---@return @class number
-function vectorClass:normalize()
-end 
- ---Rounds the vector coordinates to the nearest integers and returns the result as a new vector.
---@return @class number
-function vectorClass:round()
-end 
- ---Returns a string representation of the vector in the form of   x,y,z  .
---@return @class number
-function vectorClass:tostring()
-end 
+  return vector.new(0, 0, 0)
+end
+
+--- Adds vectorB to vectorA and returns the resulting vector.
+--- Can also be used by writing vectorA + vectorB.
+---@param vectorB vector
+---@return vector vectorC
+function vectorA:add(vectorB)
+  return vector.new(0, 0, 0)
+end
+
+--- Subtracts vectorB from vectorA and returns the resulting vector.
+--- Can also be used by writing vectorA - vectorB.
+---@param vectorB vector 
+---@return vector vectorC
+function vectorA:sub(vectorB)
+  return vector.new(0, 0, 0)
+end
+
+--- Scalar multiplies vectorA with n and returns the resulting vector.
+--- Can also be used by writing vectorA * n.
+---@param n number
+---@return vector vectorC
+function vectorA:mul(n)
+  return vector.new(0, 0, 0)
+end
+
+--- Returns the dot product of vectorA and vectorB.
+---@param vectorB vector 
+---@return number product
+function vectorA:dot(vectorB)
+  return 0
+end
+
+--- Returns the vector which resulted in the cross product of vectorA and vectorB.
+---@param vectorB vector 
+---@return vector vectorC
+function vectorA:cross(vectorB)
+  return vector.new(0, 0, 0)
+end
+
+--- Returns the vector's length.
+---@return number length
+function vectorA:length()
+  return 0
+end
+
+--- Normalizes the vector and returns the result as a new vector.
+---@return number normalized
+function vectorA:normalize()
+  return 0
+end
+
+--- Rounds the vector coordinates to the nearest integers and returns the result as a new vector.
+---@return vector rounded
+function vectorA:round()
+  return vector.new(0, 0, 0)
+end
+
+--- Returns a string representation of the vector in the form of "x,y,z".
+---@return string vectorString
+function vectorA:tostring()
+  return ""
+end
