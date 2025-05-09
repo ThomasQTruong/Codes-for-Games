@@ -15,6 +15,11 @@ while true do
     print("Turtle fuel: " .. turtle.getFuelLevel())
   end
 
+  --- Deposits extra wood into the right-side storage (i.e. drawer).
+  turtle.turnRight()
+  turtle.drop()
+  turtle.turnLeft()
+
   --- Wood is infront of turtle (start harvesting).
   local _, data = turtle.inspect()
   if data.name == "minecraft:log" then
