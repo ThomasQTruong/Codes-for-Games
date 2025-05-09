@@ -8,7 +8,7 @@
 while true do
   local detected, _ = turtle.inspect()
   if not detected then
-    sleep(1)
+    os.sleep(1)
     turtle.place()
   end
 end
