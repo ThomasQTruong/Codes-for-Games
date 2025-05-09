@@ -34,5 +34,9 @@ while true do
     end
     --- Move back to origin.
     turtle.back()
+    --- Make sure it is back on the ground (possibly had a sapling in its way).
+    while not turtle.detectDown() do
+      turtle.down()
+    end
   end
 end
