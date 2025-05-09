@@ -16,9 +16,11 @@ while true do
   end
 
   --- Deposits extra wood into the right-side storage (i.e. drawer).
-  turtle.turnRight()
-  turtle.drop()
-  turtle.turnLeft()
+  if turtle.getItemCount(1) > 0 then
+    turtle.turnRight()
+    turtle.drop()
+    turtle.turnLeft()
+  end
 
   --- Wood is infront of turtle (start harvesting).
   local _, data = turtle.inspect()
