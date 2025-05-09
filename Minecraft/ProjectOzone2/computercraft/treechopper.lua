@@ -15,7 +15,7 @@ while true do
     turtle.forward()
     --- Dig up until no more wood.
     while data.name == "minecraft:log" do
-      _, data = turtle.inspect()
+      _, data = turtle.inspectUp()
       turtle.digUp()
       turtle.up()
     end
