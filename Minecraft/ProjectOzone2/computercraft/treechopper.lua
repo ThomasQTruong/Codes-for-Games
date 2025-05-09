@@ -12,6 +12,7 @@ while true do
   --- Refuel if low.
   while turtle.getFuelLevel() < 30 do
     turtle.refuel(1)
+    print("Turtle fuel: " .. turtle.getFuelLevel())
   end
 
   --- Wood is infront of turtle (start harvesting).
