@@ -5,7 +5,15 @@
  - Copyright (c) 2025, Thomas Truong.
 --]]
 
+print("Turtle fuel: " .. turtle.getFuelLevel())
+print("If turtle fuel is low (< 30), please insert some fuel in the first slot.")
+print("Wood = 15 fuel.")
 while true do
+  --- Refuel if low.
+  while turtle.getFuelLevel() < 30 do
+    turtle.refuel(1)
+  end
+
   --- Wood is infront of turtle (start harvesting).
   local _, data = turtle.inspect()
   if data.name == "minecraft:log" then
@@ -25,6 +33,5 @@ while true do
     end
     --- Move back to origin.
     turtle.back()
-    --- Replant sapling.
   end
 end
