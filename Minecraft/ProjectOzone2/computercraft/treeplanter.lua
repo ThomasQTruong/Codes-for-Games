@@ -6,8 +6,8 @@
 --]]
 
 while true do
-  local _, data = turtle.inspect()
-  if data.name == "minecraft:air" then
+  local detected, _ = turtle.inspect()
+  if not detected then
     sleep(1)
     turtle.place()
   end
