@@ -5,7 +5,7 @@ turtle = {}
 --- Craft items using ingredients anywhere in the turtle's inventory and place results in the active
 --- slot. If a quantity is specified, it will craft only up to that many items, otherwise, it will
 --- craft as many of the items as possible.
----@param quantity number
+---@param quantity number|nil @optional
 ---@return boolean success
 function turtle.craft(quantity)
   return true
