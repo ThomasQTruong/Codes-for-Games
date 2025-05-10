@@ -13,7 +13,9 @@ while true do
     --- Select slot.
     turtle.select(slot)
     --- Get full stack of item for the slot from the storage BELOW the turtle.
-    while turtle.suckDown(64 - turtle.getItemCount()) do end
+    while turtle.getItemCount() ~= 64 do
+      turtle.suckDown(64 - turtle.getItemCount())
+    end
   end
 
   --- Craft compressed item.
