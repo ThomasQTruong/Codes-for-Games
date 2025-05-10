@@ -22,6 +22,5 @@ while true do
   turtle.craft()
 
   --- Deposit compressed item to the top.
-  turtle.select(1)
   turtle.dropUp()
 end
