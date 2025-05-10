@@ -1,6 +1,6 @@
 --[[
  - compressor.lua
- - Compresses blocks (i.e. Cobblestone -> Compressed Cobblestone).
+ - Compresses items in a 3x3 crafting grid (i.e. Cobblestone -> Compressed Cobblestone).
  -
  - Copyright (c) 2025, Thomas Truong.
 --]]

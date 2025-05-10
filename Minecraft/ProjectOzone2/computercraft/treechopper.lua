@@ -1,6 +1,7 @@
 --[[
  - treechopper.lua
- - Simple turtle AI for chopping trees at a singular spot.
+ - Simple turtle AI for chopping trees at a singular spot in front of it.
+ - Relies on a different turtle with treeplanter.lua running.
  -
  - Copyright (c) 2025, Thomas Truong.
 --]]

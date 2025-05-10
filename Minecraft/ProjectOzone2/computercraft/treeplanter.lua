@@ -1,6 +1,6 @@
 --[[
  - treeplanter.lua
- - Simple turtle AI for planting trees at a singular spot.
+ - Simple turtle AI for planting trees at a singular spot in front of it.
  -
  - Copyright (c) 2025, Thomas Truong.
 --]]
