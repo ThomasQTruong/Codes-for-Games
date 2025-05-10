@@ -35,7 +35,7 @@
           - n = the amount of compact machine wall(s) to create.
   - ProjectOzone2/
     - computercraft
-      - wget.lua
+      - [wget.lua](Minecraft/ProjectOzone2/computercraft/wget.lua)
         - The wget unix command (used to download other scripts).
         - Relies on startup.lua OR current working directory.
         - Usage: `wget <url> \[output]`
