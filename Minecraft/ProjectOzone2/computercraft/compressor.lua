@@ -13,8 +13,8 @@ while true do
     --- Select slot.
     turtle.select(slot)
     --- Get full stack of item for the slot from the storage BELOW the turtle.
-    while turtle.getItemCount() ~= 64 do
-      turtle.suckDown(64 - turtle.getItemCount())
+    while turtle.getItemSpace() ~= 0 do
+      turtle.suckDown(turtle.getItemSpace())
     end
   end
 
