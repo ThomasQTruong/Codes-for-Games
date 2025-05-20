@@ -22,7 +22,7 @@ while true do
   turtle.craft()
 
   --- Deposit compressed item to the top.
-  while not turtle.dropUp() do
+  while not turtle.dropUp() and turtle.getItemCount() > 0 do
     print("Storage is full, waiting...")
     os.sleep(1)
   end
